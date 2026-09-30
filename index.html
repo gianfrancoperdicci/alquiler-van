@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-dim": "#d8dadc", "secondary": "#006b59", "surface-container-low": "#f2f4f6", "surface-container": "#eceef0", "tertiary-container": "#381e00", "surface-bright": "#f7f9fb", "surface-container-highest": "#e0e3e5", "secondary-fixed": "#55fcd8", "on-error": "#ffffff", "on-primary-fixed": "#001c37", "surface": "#f7f9fb", "surface-variant": "#e0e3e5", "on-background": "#191c1e", "background": "#f7f9fb", "outline-variant": "#c4c6ce", "on-surface-variant": "#43474d", "on-secondary": "#ffffff", "surface-tint": "#49607e", "on-secondary-container": "#00725f", "error": "#ba1a1a", "error-container": "#ffdad6", "on-tertiary-container": "#c87900", "primary-fixed": "#d2e4ff", "inverse-on-surface": "#eff1f3", "surface-container-high": "#e6e8ea", "on-error-container": "#93000a", "primary-fixed-dim": "#b0c8eb", "outline": "#74777e", "inverse-surface": "#2d3133", "primary-container": "#0a2540", "on-secondary-fixed": "#002019", "on-primary": "#ffffff", "on-surface": "#191c1e", "inverse-primary": "#b0c8eb", "on-tertiary-fixed": "#2c1700", "on-tertiary": "#ffffff", "tertiary-fixed": "#ffdcbc", "secondary-fixed-dim": "#27dfbc", "primary": "#000f22", "secondary-container": "#55fcd8", "on-tertiary-fixed-variant": "#683d00", "tertiary-fixed-dim": "#ffb86b", "on-secondary-fixed-variant": "#005142", "tertiary": "#1a0b00", "on-primary-fixed-variant": "#314865", "surface-container-lowest": "#ffffff", "on-primary-container": "#768dad" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-lg": "1.5rem", "gutter": "1.5rem", "margin-mobile": "1rem", "gutter-mobile": "1rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "margin": "2rem" }, "fontFamily": { "label-lg": [ "Inter" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "label-sm": [ "Inter" ], "body-md": [ "Inter" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "headline-xl": [ "Plus Jakarta Sans" ], "body-lg": [ "Inter" ], "label-md": [ "Inter" ], "body-sm": [ "Inter" ] }, "fontSize": { "label-lg": [ "14px", { "lineHeight": "20px", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "fontWeight": "600" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "fontWeight": "700" } ], "label-sm": [ "11px", { "lineHeight": "14px", "fontWeight": "500" } ], "body-md": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "fontWeight": "700" } ], "headline-xl-mobile": [ "30px", { "lineHeight": "38px", "fontWeight": "700" } ], "headline-xl": [ "40px", { "lineHeight": "48px", "fontWeight": "700" } ], "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "fontWeight": "600" } ], "body-sm": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ] } }, } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><img alt='Minimalist modern logo icon for "VanGo Lima" or "LimaVans", luxury passenger van silhouette with a subtle geometric compass or route arrow, clean modern navy blue and vibrant turquoise accents, flat vector graphic SVG style on transparent background. Design context: - Primary color: #0a2540
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-md
+. The logo should be visually consistent with these brand tokens.' class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XTM_K7D9GhlNIWnA6L5HioKR9JNfnQGENOd9Zr6_1LC_UeoWveSHJlSIrF-njn_DSlS2HE6w_eT6GnqhUipc0y4AIxmuQD1wAyI9xBSVKF75-yKpaAicqAgPZDnEhMcdQcKbTFmxIoLYlXIuWjpPx4X8lL4Zol3eikK6KiiMcReWt1foGbAQuclN2-x1HcD1BGwo0ATNAwnS8nFhErvlIDl85-1XPeXiC8R6MOw7PTfCVDVtoLwA4IZOgC"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary-container tracking-tight leading-none">LimaVans</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Executive &amp; Private Tours</span></div></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary-container font-headline-sm"><a aria-current="page" class="transition-colors text-primary-container font-headline-sm" data-path="inicio" href="#">Inicio</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="flota-9-pax" href="#">Flota 9 Pax</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="rutas-y-tarifas" href="#">Rutas &amp; Tarifas</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="servicios-corporativos" href="#">Servicios Corporativos</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="faq" href="#">FAQ</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors text-primary-container font-label-lg text-label-lg" href="https://wa.me/51987654321" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-secondary text-[20px]">chat</span><span class="hidden xl:inline">+51 987 654 321</span><span class="xl:hidden">WhatsApp</span></a><a class="px-space-lg py-space-sm rounded-lg bg-primary-container hover:bg-primary text-on-primary transition-all shadow-[0_2px_8px_-2px_rgba(10,37,64,0.16)] font-label-lg text-label-lg flex items-center gap-space-xs" data-path="cotizar-van" href="#"><span>Cotizar Van</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-surface-bright py-space-xl lg:py-24">
+<!-- Subtle Ambient Glow -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-secondary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 right-0 w-[500px] h-[500px] rounded-full bg-primary-fixed/20 blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Text & Badges (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="inline-flex items-center gap-space-xs self-start px-space-md py-1.5 rounded-full bg-surface-container-high text-primary-container">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Flota Exclusiva 9 Pasajeros Lima • 2025</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h1 class="font-headline-xl text-headline-xl text-primary-container tracking-tight leading-[1.15]">
+              Alquiler de Vans de 9 Pasajeros en Lima
+              <span class="text-secondary block font-headline-xl">Con Chofer o Sin Chofer</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl pt-space-xs leading-relaxed">
+              Puntualidad ejecutiva y confort de alta gama para traslados al Aeropuerto Jorge Chávez, delegaciones corporativas en San Isidro y Miraflores, o viajes grupales a Paracas, Lunahuaná y Cieneguilla.
+            </p>
+</div>
+<!-- Trust Badges Bar -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs p-space-sm rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">SOAT &amp; Póliza</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Cobertura todo riesgo</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs p-space-sm rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]" style="font-variation-settings: 'FILL' 1;">badge</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Choferes MTC</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Récord limpio y bilingües</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs p-space-sm rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]" style="font-variation-settings: 'FILL' 1;">satellite_alt</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">GPS Monitoreo</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Seguimiento en vivo 24/7</span>
+</div>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="px-space-xl py-space-md rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg transition-all shadow-md flex items-center gap-space-xs group" href="#cotizador-en-vivo">
+<span>Cotizar Servicio Inmediato</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_downward</span>
+</a>
+<a class="px-space-lg py-space-md rounded-lg bg-surface-container-lowest hover:bg-surface-container text-primary-container font-label-lg text-label-lg transition-all shadow-sm flex items-center gap-space-xs" href="https://wa.me/51987654321?text=Hola%20LimaVans,%20deseo%20cotizar%20una%20van%20de%209%20pasajeros" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-secondary text-[20px]">chat</span>
+<span>Consultar por WhatsApp</span>
+</a>
+</div>
+</div>
+<!-- Visual / Image Showcase (5 cols) -->
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-xl overflow-hidden shadow-2xl bg-surface-container-high aspect-[4/3] lg:aspect-[5/4]">
+<img alt="Van ejecutiva de 9 pasajeros LimaVans transitando por la Costa Verde de Lima frente al Océano Pacífico con vista al faro de Miraflores" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XqlVDLKzvgBq1yQdb3hjBTv6jhP786E_QwUB-cKB40EEiBD9x8ZdtXQC12afQAm6Sry44YhIN--QO9wdoHTvCCmlj5kQjieE6JJHaInMEEX36TF0L7nKNx9KWLE46kAeWqCO2iIqJHNbV1lGq84mut0b_VE4KzxmQtouMaXODfayFfr-wy-LFdOfgJPRtsUZqKKVmWIA4aevXCo1MfU2067iEbzj0lRcz8RxkXjzMc1kKhA80EG0oTFc1W"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-on-primary">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">directions_car</span>
+<span class="font-label-md text-label-md">Mercedes-Benz Sprinter • Costa Verde</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-container/80 backdrop-blur-sm font-label-sm text-label-sm text-secondary-fixed">9 Asientos VIP</span>
+</div>
+</div>
+<!-- Floating Overlap Badge 1: Google Reviews -->
+<div class="absolute -bottom-6 -left-4 sm:-left-8 bg-surface-container-lowest p-space-md rounded-xl shadow-xl flex items-center gap-space-md max-w-xs">
+<div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">4.9 / 5</span>
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">+1,240 traslados ejecutivos exitosos</span>
+</div>
+</div>
+<!-- Floating Overlap Badge 2: Puntualidad -->
+<div class="hidden sm:flex absolute -top-4 -right-4 bg-surface-container-lowest/95 backdrop-blur-md px-space-md py-space-sm rounded-lg shadow-lg items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined text-secondary text-[20px]">schedule</span>
+<span class="font-label-md text-label-md">Garantía de Puntualidad 100%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CALCULADORA / COTIZADOR EN VIVO (SHINY & INTERACTION READY) -->
+<section class="w-full py-space-xl bg-surface" id="cotizador-en-vivo">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<!-- Calculator Box -->
+<div class="bg-surface-container-lowest rounded-xl shadow-xl p-space-lg lg:p-space-xl -mt-10 lg:-mt-16 relative z-20">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pb-space-lg">
+<div>
+<div class="flex items-center gap-space-xs text-secondary font-label-md text-label-md uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+<span>Calculadora de Tarifa Inmediata</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary-container">Cotiza tu Van de 9 Pasajeros al Instante</h2>
+</div>
+<!-- Service Mode Switcher Tabs -->
+<div class="flex items-center bg-surface-container rounded-lg p-1" id="mode-tabs">
+<button class="px-space-md py-2 rounded-lg font-label-lg text-label-lg transition-all bg-primary-container text-on-primary shadow-sm" data-mode="chofer" onclick="selectMode('chofer', this)" type="button">
+              Con Chofer Profesional
+            </button>
+<button class="px-space-md py-2 rounded-lg font-label-lg text-label-lg transition-all text-on-surface-variant hover:text-on-surface" data-mode="sin-chofer" onclick="selectMode('sin-chofer', this)" type="button">
+              Sin Chofer (Alquiler Libre)
+            </button>
+<button class="px-space-md py-2 rounded-lg font-label-lg text-label-lg transition-all text-on-surface-variant hover:text-on-surface" data-mode="por-horas" onclick="selectMode('por-horas', this)" type="button">
+              A Disposición (Por Horas)
+            </button>
+</div>
+</div>
+<!-- Form Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md pt-space-xs">
+<!-- Origen -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="calc-origin">Punto de Origen</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px]">location_on</span>
+<select class="w-full pl-10 pr-4 py-space-sm bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container transition-all" id="calc-origin" onchange="updateLiveEstimate()">
+<option value="aeropuerto">Aeropuerto Jorge Chávez</option>
+<option selected="" value="miraflores">Miraflores (Hotel / Domicilio)</option>
+<option value="san-isidro">San Isidro (Centro Financiero)</option>
+<option value="surco">Santiago de Surco / Chacarilla</option>
+<option value="barranco">Barranco Turístico</option>
+<option value="callao">Puerto del Callao (Cruceros)</option>
+</select>
+</div>
+</div>
+<!-- Destino -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="calc-destination">Destino o Recorrido</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px]">flag</span>
+<select class="w-full pl-10 pr-4 py-space-sm bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container transition-all" id="calc-destination" onchange="updateLiveEstimate()">
+<option selected="" value="aeropuerto">Aeropuerto Jorge Chávez (Ida/Vuelta)</option>
+<option value="city-tour">City Tour Lima (Colonial + Moderno)</option>
+<option value="paracas">Paracas / Reserva Nacional (Full Day)</option>
+<option value="lunahuana">Lunahuaná / Cañete (Aventura)</option>
+<option value="cieneguilla">Cieneguilla / Pachacamac</option>
+<option value="disposicion">Disposición Libre en Lima Urbana</option>
+</select>
+</div>
+</div>
+<!-- Vehículo Modelo -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="calc-model">Modelo de Van (9 Pax)</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px]">directions_bus</span>
+<select class="w-full pl-10 pr-4 py-space-sm bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container transition-all" id="calc-model" onchange="updateLiveEstimate()">
+<option value="hyundai">Hyundai H-1 Grand Starex</option>
+<option selected="" value="sprinter">Mercedes-Benz Sprinter VIP</option>
+<option value="hiace">Toyota Hiace Commuter</option>
+</select>
+</div>
+</div>
+<!-- Fecha & Hora -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="calc-date">Fecha y Horario</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px]">calendar_today</span>
+<input class="w-full pl-10 pr-3 py-space-sm bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container transition-all" id="calc-date" type="date" value="2025-05-15"/>
+</div>
+</div>
+<!-- Pasajeros selector -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Pasajeros</label>
+<div class="flex items-center justify-between bg-surface-container-low rounded-lg px-space-sm py-space-sm">
+<button class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center text-primary-container hover:bg-surface-container" onclick="adjustPax(-1)" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<div class="flex items-center gap-1 font-headline-sm text-headline-sm text-primary-container">
+<span id="pax-count">9</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-normal">pax (máx)</span>
+</div>
+<button class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center text-primary-container hover:bg-surface-container" onclick="adjustPax(1)" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Live Estimate Bar & Action Buttons -->
+<div class="mt-space-lg pt-space-md bg-surface-container-low rounded-xl p-space-md lg:p-space-lg flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-lg">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[26px]">payments</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tarifa Estimada Todo Incluido (Combustible + Peajes)</span>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-xl text-headline-xl text-primary-container" id="price-pen">S/ 180</span>
+<span class="font-body-md text-body-md text-on-surface-variant font-semibold" id="price-usd">($ 48 USD)</span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded">Precio con IGV / Facturable</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-space-lg py-space-sm rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-label-lg text-label-lg transition-all shadow-md flex items-center gap-space-xs" onclick="reserveWhatsApp()" type="button">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Bloquear Van por WhatsApp</span>
+</button>
+<button class="px-space-lg py-space-sm rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg transition-all shadow-sm flex items-center gap-space-xs" onclick="alert('Solicitud enviada a la central de despacho. Un coordinador te contactará en menos de 10 minutos con el resumen de reserva.')" type="button">
+<span>Confirmar Cotización</span>
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FLOTA DESTACADA DE 9 PASAJEROS -->
+<section class="w-full py-space-xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-space-xl">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs text-secondary font-label-md text-label-md uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">commute</span>
+<span>Unidades Propias Homologadas</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-primary-container">Nuestra Flota Ejecutiva de 9 Pasajeros</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Todas nuestras unidades cuentan con butacas ejecutivas reclinables, portaequipajes de gran volumen para 9 maletas de cabina, conexión eléctrica individual y habilitación MTC para transporte turístico nacional.
+          </p>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm shrink-0">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span>Disponibilidad 100% garantizada hoy</span>
+</div>
+</div>
+<!-- 3-Column Vehicle Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- CARD 1: Hyundai H-1 Grand Starex -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all flex flex-col group">
+<div class="relative h-56 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern silver Hyundai H-1 Grand Starex passenger van parked in upscale San Isidro financial district Lima, executive clean look, bright daylight, subtle chrome accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG8ZVvID-0vCNiVUsoDimsMbBPep2CNrHfaJMuf7WHM-TggU7lNmEPuCG0ExTOfhx9f5Cw5yKlGbpqPbmN8A4gUI0NaQcCQSpzBMfWX3TY3T-bYR8OGyKrNTemBjTDcUOKSBcA4pEFOcFb8U88llkP6wC5QecB2w8hjVmrsAAQY-zP5pn07mwFFVKvLdJrxQw0zeTyBRwp9-61auNUJfiF9make7mANwqDe5tO0kvevxK_bhymr-qTPw"/>
+<div class="absolute top-3 left-3 bg-primary-container/90 text-on-primary px-space-sm py-1 rounded font-label-sm text-label-sm">
+              9 Pasajeros + Maletero
+            </div>
+<div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-sm px-space-sm py-1 rounded font-label-md text-label-md text-primary-container">
+              Económica &amp; Ágil
+            </div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary-container">Hyundai H-1 Grand Starex</h3>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed/30 px-2 py-0.5 rounded">2023 - 2024</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                La combinación ideal de eficiencia urbana y confort. Excelente amortiguación y maniobrabilidad para las calles de Lima y traslados rápidos.
+              </p>
+</div>
+<!-- Specs Grid -->
+<div class="grid grid-cols-2 gap-space-xs text-on-surface font-label-sm text-label-sm bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">airline_seat_recline_extra</span>
+<span>9 butacas reclinables</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">luggage</span>
+<span>9 maletas de cabina</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">ac_unit</span>
+<span>A/C Bi-zona posterior</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">usb</span>
+<span>Puertos USB de carga</span>
+</div>
+</div>
+<!-- Price & Actions -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tarifa por día completo</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-primary-container">S/ 280</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ $75 USD</span>
+</div>
+</div>
+<a class="px-space-md py-space-sm rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md transition-colors flex items-center gap-1" href="https://wa.me/51987654321?text=Deseo%20reservar%20la%20Hyundai%20H1%20de%209%20pax" rel="noopener" target="_blank">
+<span>Reservar</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- CARD 2: Mercedes-Benz Sprinter VIP (Featured) -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-xl ring-2 ring-secondary flex flex-col group relative">
+<!-- Featured Badge -->
+<div class="absolute top-0 right-0 bg-secondary text-on-secondary px-space-md py-1 rounded-bl-xl font-label-sm text-label-sm font-semibold z-10 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span>Recomendado Corporativo</span>
+</div>
+<div class="relative h-56 bg-surface-container overflow-hidden">
+<img alt="Mercedes Benz Sprinter VIP negra executiva de 9 pasajeros en Lima frente al mar en Costa Verde" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1XqlVDLKzvgBq1yQdb3hjBTv6jhP786E_QwUB-cKB40EEiBD9x8ZdtXQC12afQAm6Sry44YhIN--QO9wdoHTvCCmlj5kQjieE6JJHaInMEEX36TF0L7nKNx9KWLE46kAeWqCO2iIqJHNbV1lGq84mut0b_VE4KzxmQtouMaXODfayFfr-wy-LFdOfgJPRtsUZqKKVmWIA4aevXCo1MfU2067iEbzj0lRcz8RxkXjzMc1kKhA80EG0oTFc1W"/>
+<div class="absolute top-3 left-3 bg-primary-container text-on-primary px-space-sm py-1 rounded font-label-sm text-label-sm">
+              9 Asientos Capitán de Cuero
+            </div>
+<div class="absolute bottom-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-space-sm py-1 rounded font-label-md text-label-md text-primary-container">
+              Servicio Presidencial &amp; Diplomático
+            </div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary-container">Mercedes-Benz Sprinter VIP</h3>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed/40 px-2 py-0.5 rounded font-semibold">Gama Premium</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Máximo estándar de categoría para embajadas, cumbres internacionales, directorio y viajes turísticos de lujo con chofer de traje oscuro bilingüe.
+              </p>
+</div>
+<!-- Specs Grid -->
+<div class="grid grid-cols-2 gap-space-xs text-on-surface font-label-sm text-label-sm bg-surface-container-high p-space-sm rounded-lg">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">chair</span>
+<span>Asientos capitán individuales</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">wifi</span>
+<span>WiFi 5G ilimitado a bordo</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">tv</span>
+<span>Pantalla Smart TV 24"</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">translate</span>
+<span>Chofer bilingüe certificado</span>
+</div>
+</div>
+<!-- Price & Actions -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tarifa por día completo</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-primary-container">Desde S/ 420</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ $115 USD</span>
+</div>
+</div>
+<a class="px-space-md py-space-sm rounded-lg bg-secondary hover:bg-secondary/90 text-on-secondary font-label-md text-label-md transition-colors flex items-center gap-1 shadow-md" href="https://wa.me/51987654321?text=Deseo%20reservar%20la%20Mercedes%20Sprinter%20VIP%20de%209%20pax" rel="noopener" target="_blank">
+<span>Reservar VIP</span>
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</a>
+</div>
+</div>
+</div>
+<!-- CARD 3: Toyota Hiace Commuter -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all flex flex-col group">
+<div class="relative h-56 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern white Toyota Hiace Commuter passenger van parked in a scenic highway viewpoint heading towards Paracas desert Peru, sunny blue sky, premium transport van" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS9U-NtriIpuGTKlMXcVUmNqorYVZh2Q3ctbgYKu2Fe02wI6S1EJDqQZ6Oqv2ySV13N1RiF67Wl4t2751PyPxE6FLFLtxDHiAZl6Uqp3sbnhzosV4PU61ZgaxFzcoc18FuOWcA1DHzhWgYEz0jwLnBAliEdnhsLc4C_sVmJFImWuw7pBTbIOBdYqN1r1aSREx2fR0gIn_YMmQSBG4K66d81zeFyxqEnb25ghe9Szn_tmpuHEL2TvvePA"/>
+<div class="absolute top-3 left-3 bg-primary-container/90 text-on-primary px-space-sm py-1 rounded font-label-sm text-label-sm">
+              9 Pasajeros + Bodega Amplia
+            </div>
+<div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-sm px-space-sm py-1 rounded font-label-md text-label-md text-primary-container">
+              Rutas Interurbanas &amp; Costa
+            </div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary-container">Toyota Hiace Commuter</h3>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed/30 px-2 py-0.5 rounded">2023 - 2024</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Máxima confiabilidad mecánica y espacio vertical generoso. Diseñada especialmente para viajes largos a Paracas, Lunahuaná o Cieneguilla.
+              </p>
+</div>
+<!-- Specs Grid -->
+<div class="grid grid-cols-2 gap-space-xs text-on-surface font-label-sm text-label-sm bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">altitude</span>
+<span>Techo alto para caminar cómodo</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">speed</span>
+<span>Motor diésel potente D-4D</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">sensor_door</span>
+<span>Puerta corrediza eléctrica</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">security</span>
+<span>Frenos ABS + Control control EBD</span>
+</div>
+</div>
+<!-- Price & Actions -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tarifa por día completo</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-primary-container">S/ 310</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ $85 USD</span>
+</div>
+</div>
+<a class="px-space-md py-space-sm rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md transition-colors flex items-center gap-1" href="https://wa.me/51987654321?text=Deseo%20reservar%20la%20Toyota%20Hiace%20de%209%20pax" rel="noopener" target="_blank">
+<span>Reservar</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- RUTAS POPULARES & TARIFAS TRANSPARENTES -->
+<section class="w-full py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-space-xl">
+<div class="flex flex-col max-w-2xl gap-1">
+<div class="flex items-center gap-space-xs text-secondary font-label-md text-label-md uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">route</span>
+<span>Tarifas Claras y Sin Sorpresas</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-primary-container">Rutas Frecuentes &amp; Paquetes Turísticos</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Precios cerrados que incluyen chofer calificado, combustible, peajes oficiales y tiempo de espera en el aeropuerto con letrero de bienvenida.
+        </p>
+</div>
+<!-- Routes Grid (4 items) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Ruta 1: Aeropuerto -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-[24px]">flight_land</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase">Traslado Ejecutivo 24/7</span>
+<h3 class="font-headline-sm text-headline-sm text-primary-container">Aeropuerto ⇄ Miraflores / San Isidro</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Recepción en hall de llegadas con tablet nominativa, asistencia con equipaje y monitoreo de vuelo en tiempo real.
+            </p>
+</div>
+<div class="pt-space-sm flex flex-col gap-space-xs">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tarifa fija por tramo</span>
+<span class="font-headline-md text-headline-md text-primary-container">S/ 160</span>
+</div>
+<a class="w-full text-center py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary-container font-label-md text-label-md transition-colors" href="https://wa.me/51987654321?text=Quiero%20reservar%20traslado%20Aeropuerto%20en%20van%20de%209%20pax" rel="noopener" target="_blank">
+              Agendar Vuelo
+            </a>
+</div>
+</div>
+<!-- Ruta 2: City Tour -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">museum</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase">Tour Privado 5 Horas</span>
+<h3 class="font-headline-sm text-headline-sm text-primary-container">City Tour Colonial + Malecón</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Centro Histórico, Catacumbas de San Francisco, Huaca Pucllana y recorrido escénico por Barranco y Miraflores.
+            </p>
+</div>
+<div class="pt-space-sm flex flex-col gap-space-xs">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Medio Día (5 Horas)</span>
+<span class="font-headline-md text-headline-md text-primary-container">S/ 340</span>
+</div>
+<a class="w-full text-center py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary-container font-label-md text-label-md transition-colors" href="https://wa.me/51987654321?text=Quiero%20reservar%20City%20Tour%20Lima%20van%209%20pax" rel="noopener" target="_blank">
+              Reservar Tour
+            </a>
+</div>
+</div>
+<!-- Ruta 3: Lunahuaná -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">kayaking</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase">Full Day Aventura</span>
+<h3 class="font-headline-sm text-headline-sm text-primary-container">Lunahuaná / Valle de Cañete</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Canotaje, cuatrimotos, degustación en bodegas pisqueras artesanales de Catapalla y almuerzo campestre junto al río.
+            </p>
+</div>
+<div class="pt-space-sm flex flex-col gap-space-xs">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Full Day (12 Horas)</span>
+<span class="font-headline-md text-headline-md text-primary-container">S/ 620</span>
+</div>
+<a class="w-full text-center py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary-container font-label-md text-label-md transition-colors" href="https://wa.me/51987654321?text=Quiero%20cotizar%20Full%20Day%20Lunahuana%20en%20van" rel="noopener" target="_blank">
+              Consultar Ruta
+            </a>
+</div>
+</div>
+<!-- Ruta 4: Paracas / Huacachina -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">surfing</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase">Costa Sur • 1 o 2 Días</span>
+<h3 class="font-headline-sm text-headline-sm text-primary-container">Paracas, Ballestas &amp; Huacachina</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Salida en la madrugada desde Lima, Islas Ballestas, dunas de Huacachina en tubulares, viñedo Tacama y retorno seguro.
+            </p>
+</div>
+<div class="pt-space-sm flex flex-col gap-space-xs">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ruta Completa Sur</span>
+<span class="font-headline-md text-headline-md text-primary-container">S/ 850</span>
+</div>
+<a class="w-full text-center py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary-container font-label-md text-label-md transition-colors" href="https://wa.me/51987654321?text=Quiero%20reservar%20viaje%20a%20Paracas%20Huacachina%20van%209%20pax" rel="noopener" target="_blank">
+              Cotizar Paracas
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN DE CONFIANZA Y CHOFERES CALIFICADOS -->
+<section class="w-full py-space-xl bg-surface-container-low overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg lg:p-space-xl shadow-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Driver Photo & Credential Badge (5 cols) -->
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-xl overflow-hidden aspect-[1/1] max-w-md mx-auto shadow-md">
+<img alt="Chofer profesional de LimaVans de uniforme azul saludando al lado de una van de 9 pasajeros en una calle peatonal de Miraflores Lima" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XqmiXPIQTqomQyqvllxPGyIWLsn65C8CxxAky4hT9Qm-RxlDsrhP04rb9TNbloyxydXs_Vsgt6hcSRDfnDLe-9X8N6b3ka9TSRqwoH3EVkLA6fR-rcNgji9aYuju1aJ-vwHAbiikGX3jfbGb8yTk8w3oMwoN4ckBxmLAR1MF8D6aGlRSTmi3AM8091LUTOq-eYeg4bCBVbCnFpvjuedQNGiXw2oc0MWhcDxsSNkrosaTOiXl1H-jygAAfJ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-on-primary">
+<span class="font-headline-sm text-headline-sm block">Carlos Mendoza P.</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed">Capitán de Flota Ejecutiva • 14 años de experiencia MTC</span>
+</div>
+</div>
+<!-- Overlap Guarantee Floating Card -->
+<div class="mt-4 sm:mt-0 sm:absolute sm:-bottom-4 sm:-right-4 bg-primary-container text-on-primary p-space-md rounded-xl shadow-xl max-w-xs">
+<div class="flex items-center gap-space-xs text-secondary-container mb-1">
+<span class="material-symbols-outlined text-[20px]">timer</span>
+<span class="font-label-md text-label-md">Compromiso de Puntualidad</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-container">
+                Si nuestro chofer se demora más de 15 minutos en el recojo programado, te aplicamos un <strong>20% de descuento automático</strong> en tu servicio.
+              </p>
+</div>
+</div>
+<!-- Driver Benefits & Trust Points (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs text-secondary font-label-md text-label-md uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Calidad Humana y Operacional</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary-container">
+                Conductores Profesionales Homologados y Facturación Inmediata
+              </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                No arriesgues a tu familia o a los directivos de tu empresa con transportes informales. En LimaVans cumplimos con todas las normativas del Ministerio de Transportes y Comunicaciones (MTC) y ATU.
+              </p>
+</div>
+<!-- 4 Trust Highlights -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex gap-space-sm items-start">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">assignment_ind</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Récord Limpio MTC</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Conductores profesionales evaluados continuamente, sin infracciones graves y con exámenes médicos vigentes.
+                  </p>
+</div>
+</div>
+<div class="flex gap-space-sm items-start">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">receipt_long</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Facturación para Empresas</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Emitimos Factura electrónica con RUC al instante. Aceptamos Yape, Plin, Transferencias BCP/BBVA y Tarjetas de Crédito.
+                  </p>
+</div>
+</div>
+<div class="flex gap-space-sm items-start">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">sanitizer</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Sanitización y Confort</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Limpieza profunda antes de cada servicio. Unidades desinfectadas, aromatizadas y con botellas de agua mineral de cortesía.
+                  </p>
+</div>
+</div>
+<div class="flex gap-space-sm items-start">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">hub</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Monitoreo Centralizado</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Cabina conectada por telemetría y botón de pánico satelital para una experiencia de viaje 100% segura y controlada.
+                  </p>
+</div>
+</div>
+</div>
+<!-- Corporate CTA Strip -->
+<div class="p-space-md rounded-lg bg-surface-container-high flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[28px]">domain</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary-container">¿Eres coordinador corporativo o de eventos?</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Abrimos líneas de crédito a 15 y 30 días para cuentas empresariales en Lima.</span>
+</div>
+</div>
+<a class="px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shrink-0 hover:bg-primary transition-colors" href="https://wa.me/51987654321?text=Hola,%20solicito%20convenio%20corporativo%20para%20vans%20de%209%20pax" rel="noopener" target="_blank">
+                Solicitar Convenio
+              </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ ACORDEÓN -->
+<section class="w-full py-space-xl bg-surface">
+<div class="max-w-4xl mx-auto px-6 lg:px-12 flex flex-col gap-space-lg">
+<div class="text-center flex flex-col items-center gap-1">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider">Dudas Frecuentes</span>
+<h2 class="font-headline-xl text-headline-xl text-primary-container">Todo lo que necesitas saber antes de viajar</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Respuestas rápidas sobre equipaje, reservas de último minuto y alquiler libre sin chofer.</p>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-md">
+<!-- FAQ 1 -->
+<details class="group bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all" open="">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<span class="font-headline-sm text-headline-sm text-primary-container">¿Entran 9 pasajeros cómodos y todo el equipaje al mismo tiempo?</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-sm leading-relaxed">
+            Sí, nuestras vans de 9 pasajeros (Hyundai H-1, Toyota Hiace y Mercedes Sprinter) están configuradas específicamente con fila de maletero posterior profundo que permite transportar 9 personas más 9 maletas tamaño carry-on (o 6 maletas grandes de 23kg + mochilas de mano). Si tu grupo lleva equipaje sobredimensionado (tablas de surf, instrumentos musicales o cajas de exposición), te sugerimos coordinar un portaequipajes de techo previa reserva.
+          </p>
+</details>
+<!-- FAQ 2 -->
+<details class="group bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<span class="font-headline-sm text-headline-sm text-primary-container">¿Cuáles son los requisitos para alquilar la van SIN chofer?</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-sm leading-relaxed">
+            Para la modalidad de alquiler sin chofer, el conductor debe presentar DNI o Pasaporte vigente, Licencia de Conducir válida (Categoría A-I o superior con mínimo 2 años de antigüedad), tener al menos 25 años y dejar una garantía mediante tarjeta de crédito autorizada. Se entrega la unidad con tanque lleno y contrato de devolución transparente.
+          </p>
+</details>
+<!-- FAQ 3 -->
+<details class="group bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<span class="font-headline-sm text-headline-sm text-primary-container">¿Qué sucede si mi vuelo al Aeropuerto Jorge Chávez se retrasa?</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-sm leading-relaxed">
+            Monitoreamos el número de tu vuelo en tiempo real. Aunque tu vuelo se retrase 1, 2 o más horas, tu chofer asignado ajustará la hora de encuentro sin cobrar penalidades ni recargos por espera en el aeropuerto. Estará listo en la puerta de salida nacional o internacional con un letrero identificador.
+          </p>
+</details>
+<!-- FAQ 4 -->
+<details class="group bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<span class="font-headline-sm text-headline-sm text-primary-container">¿Las tarifas incluyen combustible y peajes?</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-sm leading-relaxed">
+            En los servicios con chofer dentro de Lima (Aeropuerto, City Tour o día completo urbano), el combustible y los peajes están 100% cubiertos en el precio cotizado. Para viajes interprovinciales (Paracas, Ica, Lunahuaná), el desglose se indica claramente en la cotización para que no pagues ningún cargo oculto durante el recorrido.
+          </p>
+</details>
+</div>
+</div>
+</section>
+<!-- CTA FINAL DE CONVERSIÓN CON WHATSAPP Y FORMULARIO RÁPIDO -->
+<section class="w-full py-space-xl bg-primary-container text-on-primary relative overflow-hidden">
+<div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Pitch & Direct Whatsapp (6 cols) -->
+<div class="lg:col-span-6 flex flex-col gap-space-lg">
+<div class="inline-flex items-center gap-space-xs self-start px-space-md py-1 rounded-full bg-surface-container-lowest/10 text-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Reserva Express en 3 Minutos</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-headline-xl text-headline-xl text-on-primary">
+              ¿Listo para viajar con la máxima comodidad en Lima?
+            </h2>
+<p class="font-body-lg text-body-lg text-on-primary-container">
+              Atención personalizada inmediata vía WhatsApp las 24 horas del día. Dinos cuándo necesitas la van y nosotros nos encargamos de todo el operativo logístico.
+            </p>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md pt-space-xs">
+<a class="px-space-xl py-space-md rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-label-lg text-label-lg transition-all shadow-xl flex items-center justify-center gap-space-xs" href="https://wa.me/51987654321?text=Hola%20LimaVans,%20quiero%20reservar%20una%20van%20de%209%20pasajeros%20urgente" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[24px]">chat</span>
+<span>Hablar con un Asesor (+51 987 654 321)</span>
+</a>
+</div>
+<div class="flex items-center gap-space-lg text-on-primary-container font-label-sm text-label-sm pt-space-xs">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">verified</span>
+<span>Confirmación vía voucher oficial</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">credit_card</span>
+<span>Pagos con tarjeta sin recargo</span>
+</div>
+</div>
+</div>
+<!-- Mini Contact Form (6 cols) -->
+<div class="lg:col-span-6">
+<div class="bg-surface-container-lowest text-on-surface rounded-xl p-space-lg lg:p-space-xl shadow-2xl">
+<div class="flex flex-col gap-1 pb-space-md">
+<span class="font-headline-sm text-headline-sm text-primary-container">Solicitar Cotización Formal por Correo</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Recibe la cotización membretada en PDF apta para área de compras o tesorería.</p>
+</div>
+<form class="flex flex-col gap-space-sm" onsubmit="event.preventDefault(); alert('¡Gracias! En breve te enviaremos la cotización detallada en PDF a tu correo electrónico.');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Nombre y Apellido</label>
+<input class="w-full px-space-md py-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors" placeholder="Ej. Mariana Ramos" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Empresa o RUC (Opcional)</label>
+<input class="w-full px-space-md py-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors" placeholder="Ej. Lima Tours S.A.C." type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Correo Electrónico</label>
+<input class="w-full px-space-md py-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors" placeholder="contacto@empresa.com" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Teléfono / Celular</label>
+<input class="w-full px-space-md py-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors" placeholder="+51 900 000 000" required="" type="tel"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Detalle del Servicio / Fechas / Rutas</label>
+<textarea class="w-full px-space-md py-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors resize-none" placeholder="Indícanos fecha estimada, lugar de recojo, itinerario y cantidad de personas..." rows="3"></textarea>
+</div>
+<button class="w-full mt-space-xs py-space-sm rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg transition-all shadow-md flex items-center justify-center gap-space-xs" type="submit">
+<span>Enviar Solicitud de Cotización</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INLINE CLIENT SCRIPT FOR DYNAMIC CALCULATOR INTERACTION -->
+<script>
+    let currentMode = 'chofer';
+    let currentPax = 9;
+
+    const basePricing = {
+      chofer: {
+        'aeropuerto': { pen: 180, usd: 48 },
+        'city-tour': { pen: 340, usd: 90 },
+        'paracas': { pen: 850, usd: 228 },
+        'lunahuana': { pen: 620, usd: 165 },
+        'cieneguilla': { pen: 420, usd: 112 },
+        'disposicion': { pen: 360, usd: 96 }
+      },
+      'sin-chofer': {
+        'aeropuerto': { pen: 240, usd: 65 },
+        'city-tour': { pen: 280, usd: 75 },
+        'paracas': { pen: 320, usd: 85 },
+        'lunahuana': { pen: 300, usd: 80 },
+        'cieneguilla': { pen: 280, usd: 75 },
+        'disposicion': { pen: 280, usd: 75 }
+      },
+      'por-horas': {
+        'aeropuerto': { pen: 200, usd: 54 },
+        'city-tour': { pen: 260, usd: 70 },
+        'paracas': { pen: 700, usd: 188 },
+        'lunahuana': { pen: 500, usd: 134 },
+        'cieneguilla': { pen: 350, usd: 94 },
+        'disposicion': { pen: 290, usd: 78 }
+      }
+    };
+
+    const modelMultipliers = {
+      'hyundai': 1.0,
+      'sprinter': 1.3,
+      'hiace': 1.1
+    };
+
+    function selectMode(mode, btnElement) {
+      currentMode = mode;
+      const tabButtons = document.querySelectorAll('#mode-tabs button');
+      tabButtons.forEach(btn => {
+        btn.className = "px-space-md py-2 rounded-lg font-label-lg text-label-lg transition-all text-on-surface-variant hover:text-on-surface";
+      });
+      btnElement.className = "px-space-md py-2 rounded-lg font-label-lg text-label-lg transition-all bg-primary-container text-on-primary shadow-sm";
+      updateLiveEstimate();
+    }
+
+    function adjustPax(delta) {
+      currentPax = Math.min(9, Math.max(1, currentPax + delta));
+      document.getElementById('pax-count').innerText = currentPax;
+      updateLiveEstimate();
+    }
+
+    function updateLiveEstimate() {
+      const dest = document.getElementById('calc-destination').value;
+      const model = document.getElementById('calc-model').value;
+      
+      const rates = basePricing[currentMode][dest] || { pen: 280, usd: 75 };
+      const mult = modelMultipliers[model] || 1.0;
+
+      const finalPen = Math.round(rates.pen * mult);
+      const finalUsd = Math.round(rates.usd * mult);
+
+      document.getElementById('price-pen').innerText = 'S/ ' + finalPen;
+      document.getElementById('price-usd').innerText = '($ ' + finalUsd + ' USD)';
+    }
+
+    function reserveWhatsApp() {
+      const origin = document.getElementById('calc-origin').selectedOptions[0].text;
+      const dest = document.getElementById('calc-destination').selectedOptions[0].text;
+      const model = document.getElementById('calc-model').selectedOptions[0].text;
+      const date = document.getElementById('calc-date').value;
+      const pen = document.getElementById('price-pen').innerText;
+
+      const msg = `Hola LimaVans! Deseo reservar el servicio:\n- Modalidad: ${currentMode}\n- Van: ${model}\n- Origen: ${origin}\n- Destino: ${dest}\n- Pasajeros: ${currentPax} pax\n- Fecha: ${date}\n- Tarifa estimada: ${pen}`;
+      window.open('https://wa.me/51987654321?text=' + encodeURIComponent(msg), '_blank');
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface"><div class="max-w-7xl mx-auto px-6 lg:px-12 pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-xl"><div class="flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-secondary-container"><span class="material-symbols-outlined text-[20px]">airport_shuttle</span></div><span class="font-headline-sm text-headline-sm text-primary-container">LimaVans</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Servicio premium de transporte privado y corporativo en vans ejecutivas de 9 pasajeros. Confort, puntualidad y choferes profesionales certificados en Lima y todo el Perú.</p><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-[18px]">verified</span><span class="font-label-sm text-label-sm">RUC: 20608945123 - LIMAVANS S.A.C.</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface">Cobertura Estratégica</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li>Aeropuerto Int. Jorge Chávez (Traslados 24/7)</li><li>Centro Financiero San Isidro &amp; Hoteles</li><li>Miraflores Turístico &amp; Malecón</li><li>Santiago de Surco &amp; La Molina</li><li>Rutas Departamentales: Paracas, Ica, Lunahuaná</li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface">Enlaces de Interés</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="flota-9-pax" href="#">Capacidad y Maletero (9 Pax)</a></li><li><a class="hover:text-primary transition-colors" data-path="rutas-y-tarifas" href="#">Tarifas Corporativas y Por Día</a></li><li><a class="hover:text-primary transition-colors" data-path="servicios-corporativos" href="#">Convenios para Empresas</a></li><li><a class="hover:text-primary transition-colors" data-path="terminos-y-condiciones" href="#">Términos y Condiciones del Servicio</a></li><li><a class="hover:text-primary transition-colors" data-path="politicas-de-privacidad" href="#">Políticas de Privacidad</a></li></ul></div><div class="flex flex-col gap-space-md"><span class="font-headline-sm text-headline-sm text-on-surface">Central de Reservas</span><div class="flex flex-col gap-space-xs"><a class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors" href="tel:+51987654321"><span class="material-symbols-outlined text-secondary text-[20px]">call</span><span class="font-label-lg text-label-lg">+51 987 654 321</span></a><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-[20px]">mail</span><span class="font-body-sm text-body-sm">reservas@limavans.pe</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-[20px]">location_on</span><span class="font-body-sm text-body-sm">Av. Víctor Andrés Belaúnde 147, San Isidro, Lima</span></div></div><div class="mt-space-xs p-space-sm rounded-lg bg-surface-container-highest flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary-container text-[24px]">menu_book</span><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface">Libro de Reclamaciones</span><span class="font-label-sm text-label-sm text-on-surface-variant">Hoja de reclamación virtual</span></div></div><a class="px-space-sm py-space-xs rounded bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-low transition-colors" data-path="libro-de-reclamaciones" href="#">Acceder</a></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-label-sm text-label-sm"><p>© 2025 LimaVans S.A.C. Todos los derechos reservados. Transporte turístico y ejecutivo autorizado por MTC y ATU.</p><div class="flex items-center gap-space-md"><a class="hover:text-on-surface transition-colors" data-path="libro-de-reclamaciones" href="#">Reclamaciones</a><a class="hover:text-on-surface transition-colors" data-path="politicas-de-privacidad" href="#">Privacidad</a><a class="hover:text-on-surface transition-colors" data-path="terminos-y-condiciones" href="#">Términos</a></div></div></div></footer></body></html>
